@@ -10,7 +10,7 @@ from PIL import Image, ImageTk
 class DepthEstimationApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Depth Estimation App")
+        self.root.title("Dimensor")
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.midas = torch.hub.load("intel-isl/MiDaS", "DPT_Large")
         self.midas.to(self.device).eval()
